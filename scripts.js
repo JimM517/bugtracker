@@ -125,11 +125,11 @@ function fetchIssues() {
         issuesList.innerHTML += `<div class="jumbotron">
                                 <h6>Issue ID: ${id}<h6>
                                 <p><span class="label label-info">${status}<span></p>
-                                <h3>${desc}</h3>
+                                <p>${desc}</p>
                                 <p><span class="glyphicon glyphicon-time"></span>${importance}</p>
                                 <p><span class="glyphicon glyphicon-user"></span>${assignedTo}</p>
-                                <h3>${operatingSystem}</h3>
-                                <h3>${issueEmail}</h3>
+                                <p>${operatingSystem}</p>
+                                <p>${issueEmail}</p>
                                 <a onclick="setStatusClosed('${id}')" class="btn btn-warning">Close</a>
                                 <a href="#" onclick="deleteIssue('${id}')" class="btn btn-danger">Delete</a>
                                 </div>`;
