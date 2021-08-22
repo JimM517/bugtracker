@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="style.css" rel="stylesheet">
+    <title>Demo Bug Tracker</title>
+</head>
+<body window.onload="fetchIssues()">
+    <div class="container">
+        <h1>Bug and Quality Assurance Tracker</h1>
+        <div class="jumbotron">
+            <h3>Submit New Issue:</h3>
+            <form id="issueInputForm">
+                <div class="form-group">
+                    <label for="issueDescInput">Description</label>
+                    <input type="text" class="form-control" id="issueDescInput" placeholder="Please give a brief description of what issues you are having...">
+                </div>
+                <div class="form-group">
+                    <label for="issueImportanceInput">Importance</label>
+                    <select id="issueImportanceInput" class="form-control">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="severe">Urgent</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="issueAssignedToInput">Assigned To</label>
+                    <input type="text" class="form-control" id="issueAssignedToInput">
+                </div>
+                <div class="form-group">
+                    <label for="issueOperatingSystemInput">Operating System</label>
+                    <input type="text" class="form-control" id="issueOperatingSystemInput" placeholder="Operating System">
+                </div>
+                <div class="form-group">
+                    <label for="issueEmailInput">Email Address</label>
+                    <input type="email" class="form-control" id="issueEmailInput" placeholder="Please leave an email address if any further information is required...">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <div id="issuesList">
+
+            </div>
+        </div>
+    </div>
+    <script defer src="scripts.js"></script>
+    <script src="https://chancejs.com/chance.min.js"></script>
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
