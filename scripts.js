@@ -66,47 +66,6 @@ function deleteIssue(id) {
     fetchIssues();
 }
 
-
-
-/*document.getElementById('issueInput').addEventListener('submit', saveIssue)
-    functiion saveIssue(e) {
-    let issueDesc = document.getElementById('issueDescInput').value;
-    let issueImportance = document.getElementById('importanceInput').value;
-    let issueAssignedTo = document.getElementById('assignedToInput').value;
-    let operatingSystem = document.getElementById('operatingSystemInput').value;
-    //use chance to set global unit identifier//
-    let issueId = chance.guid();
-    let issueStatus = 'Open';
-    
-
-    const issue = {
-        id: issueId,
-        description: issueDesc,
-        importance: issueImportance,
-        operatingSystem: operatingSystem,
-        assignedTo: issueAssignedTo,
-        status: issueStatus,
-    }
-    
-
-    if (localStorage.getItem('issues') == null) {
-        let issues = [];
-        issues.push(issue);
-        localStorage.setItem('issues', JSON.stringify(issues))
-    } else {
-        let issues = issues.JSON.parse(localStorage.getItem('issues'))
-        issues.push(issue);
-        localStorage.setItem('issues', JSON.stringify(issues));
-    }
-
-    document.getElementById('issueInput').reset();
-
-    fetchIssue();
-
-    e.preventDefault();
-} */
-
-
 function fetchIssues() {
     let issues = JSON.parse(localStorage.getItem('issues'));
     let issuesList = document.getElementById('issuesList')
@@ -136,31 +95,4 @@ function fetchIssues() {
     }
 
 }
-    /*
-    let issues = JSON.parse(localStorage.getItem('issues'));
-    let issuesList = document.getElementById('issuesList');
-
-    issuesList.innerHTML = '';
-
-    for (let i = 0; i < issues.length; i++) {
-        let id = issues[i].id;
-        let desc = issues[i].description;
-        let importance = issues[i].importance;
-        let assignedTo = issues[i].assignedTo;
-        let operatingSystem = issues[i].operatingSystem;
-        let status = issues[i].status;
-
-        issuesList.innerHTML +=  `<div class="jumbotron">
-                                <h6>Issue ID: ${id}<h6>
-                                <p><span class="label label-info">${status}<span></p>
-                                <h3>${desc}</h3>
-                                <p><span class="glyphicon glyphicon-time"></span>${importance}</p>
-                                <p><span class="glyphicon glyphicon-user"></span>${assignedTo}</p>
-                                <h3>${operatingSystem}</h3>
-                                <a href="#" onclick="statusClosed(${id}) class="btn btn-warning">Close</a>
-                                <a href="#" onclick="delete(${id})class="btn btn-danger">Delete</a>
-                                </div>`
-
-
-    };
-}; */
+    
